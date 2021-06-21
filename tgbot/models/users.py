@@ -114,7 +114,7 @@ if __name__ == '__main__':
         for user_id, first_name in zip(ids, names):
             with suppress(sqlalchemy.exc.IntegrityError):
                 user = await User.add_user(session, user_id, first_name)
-                user = await User.get_user(session, user_id)
+                # user = await User.get_user(session, user_id)
                 print(user)
 
                 referrer = user
